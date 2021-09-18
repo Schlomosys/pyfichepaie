@@ -31,7 +31,9 @@ AUTH_USER_MODEL = 'fichepaie.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 SECRET_KEY =os.environ['SECRET_KEY']
-DEBUG =False
+DEBUG =os.environ['DEBUG']
+
+ALLOWED_HOSTS = ['pyfichepaie.herokuapp.com']
 
 
 
@@ -171,4 +173,3 @@ EMAIL_HOST_PASSWORD = 'gsadbllkgzxsckkf'
 import dj_database_url 
 db_from_env = dj_database_url.config(conn_max_age=500) 
 DATABASES['default'].update(db_from_env)
-ALLOWED_HOSTS = []
