@@ -33,7 +33,7 @@ AUTH_USER_MODEL = 'fichepaie.User'
 SECRET_KEY =os.environ['SECRET_KEY']
 DEBUG =False
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -165,3 +165,10 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'dafc.dedras@gmail.com'
 EMAIL_HOST_PASSWORD = 'gsadbllkgzxsckkf'
+
+
+
+import dj_database_url 
+db_from_env = dj_database_url.config(conn_max_age=500) 
+DATABASES['default'].update(db_from_env)
+ALLOWED_HOSTS = []
