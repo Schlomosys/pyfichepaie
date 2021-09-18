@@ -1,2 +1,2 @@
 web: gunicorn pyfichepaie.wsgi --log-file -
-celery: celery worker -A pyfichepaie -l info -c 4
+worker: python manage.py celery worker -B -l info
