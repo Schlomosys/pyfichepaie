@@ -32,7 +32,6 @@ AUTH_USER_MODEL = 'fichepaie.User'
 #DEBUG = True
 SECRET_KEY =os.environ['SECRET_KEY']
 DEBUG =False
-ALLOWED_HOSTS = ['pyfichepaie.herokuapp.com']
 
 
 
